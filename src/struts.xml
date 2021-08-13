@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+<!-- <constant name="struts.devMode" value="true"></constant> -->
+<package name="default" extends="struts-default">
+<action name="register" class="com.action.RegisterAction">
+<result name="REGISTER">/thankyou.jsp</result>
+</action>
+<action name="login" class="com.action.LoginAction">
+<result name="success">/Dashboard.jsp</result>
+<result name="error">/login.jsp</result>	
+</action>
+<action name="ProfileAction" class="com.action.ProfileAction">
+<result name="success">/Profile.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+<action name="LoginAction" class="com.action.ProfileAction">
+<result name="success">/Dashboard.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+<action name="updatedetails" class="com.action.UpdateAction">
+<result name="UPDATE">/UpdateProfile.jsp</result>
+<result name="success">/tyUpdate.jsp</result>
+</action>
+<action name="emailer" class="com.action.ForgotPwdAction">
+		<result name="success">/success.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action> 
+	<action name="deleterecord" class="com.action.DeleteAction">
+<result name="DELETE">/Delete.jsp</result>
+</action>
+		<action name="Search" class="com.action.SearchAction">
+		<result name="REPORT">/SearchUser.jsp</result>
+	</action>
+	<action name="ViewUserProfileAction" class="com.action.ViewUserProfileAction">
+<result name="success">/ViewProfile.jsp</result>
+<result name="error">/error.jsp</result>
+</action>
+<action name="Admin" class="com.action.AdminAction">
+<result name="success">/AdminDashboard.jsp</result>
+<result name="error">/AdminLogin.jsp</result>
+</action>
+<action name="ReportAction" class="com.action.ReportAction">
+<result name="REPORT">/Report.jsp</result>
+</action>
+
+
+</package>
+</struts>
